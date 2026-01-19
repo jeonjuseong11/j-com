@@ -1,0 +1,150 @@
+/* login.module.css */
+
+/* 1. 모달 배경 (화면 정중앙 정렬) */
+.modalBackground {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+/* 2. 모달 창 본체 */
+.modal {
+    background: #ffffff;
+    position: relative;
+    max-width: 80vw;
+    min-width: 600px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 3. 모달 헤더 */
+.modalHeader {
+    padding: 36px 80px 20px;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+/* 4. 폼 레이아웃 */
+.modal form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.modalBody {
+    flex: 1;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 5. 입력창 컨테이너 */
+.inputDiv {
+    position: relative;
+    height: 56px;
+    margin: 12px 0;
+}
+
+/* 6. 입력창 (배경색 끊김 해결) */
+.input {
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    border: 1px solid rgb(207, 217, 222);
+    border-radius: 4px;
+    padding: 24px 12px 8px; /* 텍스트 위치 잡기 */
+    margin-top: 0;
+    outline: none;
+    background-color: white;
+    transition: all 0.2s;
+    color: rgb(15, 20, 25);
+    /* box-sizing이 글로벌에 없다면 안전장치로 추가 가능하지만, 보통 글로벌에 둡니다 */
+    box-sizing: border-box;
+}
+
+/* 입력창 포커스 효과 */
+.input:focus {
+    border: 2px solid #1d9bf0;
+    padding: 23px 11px 7px; /* 보더 두께 보정 */
+}
+
+/* 7. 라벨 */
+.inputLabel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: rgb(83, 100, 113);
+    pointer-events: none; /* 클릭 통과 */
+    border: none;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+/* 포커스 시 라벨 색상 변경 */
+.input:focus ~ .inputLabel {
+    color: #1d9bf0;
+}
+
+/* 8. 하단 영역 */
+.modalFooter {
+    padding: 24px 80px;
+}
+
+/* 9. 액션 버튼 */
+.actionButton {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgb(15, 20, 25);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.actionButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.actionButton:hover:not(:disabled) {
+    background-color: rgb(39, 44, 48);
+}
+
+/* 10. 닫기 버튼 */
+.closeButton {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeButton:hover {
+    background-color: rgba(15, 20, 25, 0.1);
+}
