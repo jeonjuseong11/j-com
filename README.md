@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📘 Next.js 15 Deep Diveㄴ
 
-## Getting Started
+## 🚀 Project Philosophy: Beyond the Tutorial
 
-First, run the development server:
+이 프로젝트는 zerocho님의 Next.js 14 강의를 기반으로 시작되었으나, **"단순한 기능 구현"을 넘어 "프로덕션 레벨의 디테일"을 잡는 것**을 목표로 **Next.js 15 (React 19)** 환경에서 새롭게 리팩토링할 것입니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🎯 Core Values
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **No More Copy-Paste**: 강의 코드를 맹목적으로 따라치지 않고, 각 라인의 의미와 동작 원리를 100% 이해한 뒤 작성합니다.
+- **Deep Dive into Details**: 강의에서 다루지 않은 엣지 케이스(Edge Case), 웹 접근성(A11y), 성능 최적화, 보안 이슈를 스스로 발굴하여 해결합니다.
+- **Future-Proof Engineering**: **Next.js 15**의 최신 스펙(Async Request APIs, Server Actions)을 준수하여, 향후 **Next.js 16** 등 메이저 업데이트 시에도 마이그레이션 비용이 없는 "표준(Standard) 아키텍처"를 지향합니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 Troubleshooting & Migration Log
 
-## Learn More
+개발 과정에서의 기술적 고민과 트러블슈팅, 매일의 학습 기록은 별도 문서로 관리합니다.
 
-To learn more about Next.js, take a look at the following resources:
+👉 [**See Full Development Log (TIL)**](./DEV_LOG.md)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 15 Async Params**: `params` 비동기 처리 적용.
+- **Parallel Routes**: 딥링크 모달 구현을 위한 라우팅 구조 설계.
