@@ -1,4 +1,4 @@
-# 📘 Next.js 15 Deep Diveㄴ
+# 📘 Next.js 15 Deep Dive
 
 ## 🚀 Project Philosophy: Beyond the Tutorial
 
